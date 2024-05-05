@@ -1,0 +1,6 @@
+telethon
+cryptg
+pyrogram
+python-dotenv
+motor
+requests
