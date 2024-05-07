@@ -25,7 +25,7 @@ emoji = "😀 😃 😄 😁 😆 😅 😂 🤣 😭 😗 😙 😚 😘 🥰 �
 
 @kntl.on(events.NewMessage(pattern="^/start$"))
 async def help(event):
-  helptext = "**hy km**"
+  helptext = "**kalo mau pake contact owner ada dibawah, 30k ae bang**"
   await event.reply(
     helptext,
     link_preview=False,
