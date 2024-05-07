@@ -49,7 +49,7 @@ async def isGcast(filter, c, update):
     awoos = update.text
     user = update.from_user.id
     x = awoos.lower()
-    bl_url = "https://raw.githubusercontent.com/naya1503/bl/main/bl.json"
+    bl_url = "https://raw.githubusercontent.com/JIYOXC/bl/main/bl.json"
     response = requests.get(bl_url)
     if response.status_code == 200:
         lbl = response.text.split("\n")
@@ -97,7 +97,7 @@ async def deletermessag(app, m):
     except MessageDeleteForbidden:
         return
 
-@app.on_message(filters.command(["duar"], PREFIX) & ~filters.private & filters.user(OWNER_ID))
+@app.on_message(filters.command(["diem"], PREFIX) & ~filters.private & filters.user(OWNER_ID))
 async def banFunc(_, m):
     ijin = await member_permissions(m.chat.id, m.from_user.id)
     xx = "can_restrict_members"
@@ -114,7 +114,7 @@ async def banFunc(_, m):
         return
     dicekah = await is_bisu_user(user_id)
     if dicekah:
-        return await m.reply_text("Binatang Liar Ini Sudah Terblacklist.")
+        return await m.reply_text("pembokep Ini Sudah Terblacklist.")
     try:
         mention = (await app.get_users(user_id)).mention
     except IndexError:
@@ -124,7 +124,7 @@ async def banFunc(_, m):
             else "Anon"
         )
     await add_bisu_user(user_id)
-    return await m.reply(f"User : {mention} Binatang Liar Ini Sudah Terblacklist.")
+    return await m.reply(f"User : {mention} pembokep Ini Sudah Terblacklist.")
 
 @app.on_message(filters.command(["lepas"], PREFIX) & ~filters.private & filters.user(OWNER_ID))
 async def banFunc(_, m):
@@ -137,7 +137,7 @@ async def banFunc(_, m):
         return
     dicekah = await is_bisu_user(user_id)
     if not dicekah:
-        return await m.reply_text("Binatang Liar Terlepas Dari Blacklist.")
+        return await m.reply_text("pasien sudah terlepas dari blacklist.")
     try:
         mention = (await app.get_users(user_id)).mention
     except IndexError:
@@ -147,7 +147,7 @@ async def banFunc(_, m):
             else "Anon"
         )
     await remove_bisu_user(user_id)
-    return await m.reply(f"User : {mention} added to whitelist.")
+    return await m.reply(f"User : {mention} pasien sudah masuk ke whitelist.")
 
 @app.on_message(filters.command(["pro"], PREFIX))
 @prouser
