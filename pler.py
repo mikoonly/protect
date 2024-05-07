@@ -25,7 +25,7 @@ emoji = "😀 😃 😄 😁 😆 😅 😂 🤣 😭 😗 😙 😚 😘 🥰 �
 
 @kntl.on(events.NewMessage(pattern="^/start$"))
 async def help(event):
-  helptext = "**Ada 2 Mode Tag All Cok, Kalo /tagall emot sange + nama user. kalo /all itu random emote tanpa nama user.**"
+  helptext = "**ngapain {mention} bang?**"
   await event.reply(
     helptext,
     link_preview=False,
