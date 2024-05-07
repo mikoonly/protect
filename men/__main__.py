@@ -49,7 +49,7 @@ async def isGcast(filter, c, update):
     awoos = update.text
     user = update.from_user.id
     x = awoos.lower()
-    bl_url = ""
+    bl_url = "https://raw.githubusercontent.com/naya1503/bl/main/bl.json"
     response = requests.get(bl_url)
     if response.status_code == 200:
         lbl = response.text.split("\n")
