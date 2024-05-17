@@ -164,7 +164,7 @@ async def diproin(c, m):
         await m.reply_text("Added to Anti-Gcast.")
 
 
-@app.on_message(filters.command("listpro", PREFIX))
+@app.on_message(filters.command("getactive", PREFIX))
 @prouser
 async def KONTOL(c, m):
     text = ""
