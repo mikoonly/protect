@@ -25,7 +25,7 @@ emoji = "😀 😃 😄 😁 😆 😅 😂 🤣 😭 😗 😙 😚 😘 🥰 �
 
 @kntl.on(events.NewMessage(pattern="^/start$"))
 async def help(event):
-  helptext = f"**👋🏻🏻 Hi! Bot ini akan menghapus otomatis pesan broadcast yang mengganggu di group. Tambahkan bot sebagai admin dan segera hubungi untuk berlangganan bot ini.**"
+  helptext = f"**Hi! Bot ini akan menghapus otomatis pesan broadcast yang mengganggu di group. Tambahkan bot sebagai admin dan segera hubungi owner untuk berlangganan bot ini.**"
   await event.reply(
     helptext,
     link_preview=False,
