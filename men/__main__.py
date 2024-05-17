@@ -15,7 +15,7 @@ async def init():
     await idle()
     await app.stop()
 
-@app.on_message(filters.command("protec", PREFIX) & ~filters.private)
+@app.on_message(filters.command("protect", PREFIX) & ~filters.private)
 @prouser
 # @language
 async def anti_anti(_, m):
@@ -114,7 +114,7 @@ async def banFunc(_, m):
         return
     dicekah = await is_bisu_user(user_id)
     if dicekah:
-        return await m.reply_text("pembokep Ini Sudah Terblacklist.")
+        return await m.reply_text("user ini sudah masuk ke database.")
     try:
         mention = (await app.get_users(user_id)).mention
     except IndexError:
@@ -124,7 +124,7 @@ async def banFunc(_, m):
             else "Anon"
         )
     await add_bisu_user(user_id)
-    return await m.reply(f"User : {mention} pembokep Ini Sudah Terblacklist.")
+    return await m.reply(f"User : {mention} berhasil diblacklist.")
 
 @app.on_message(filters.command(["lepas"], PREFIX) & ~filters.private & filters.user(OWNER_ID))
 async def banFunc(_, m):
@@ -137,7 +137,7 @@ async def banFunc(_, m):
         return
     dicekah = await is_bisu_user(user_id)
     if not dicekah:
-        return await m.reply_text("pasien sudah terlepas dari blacklist.")
+        return await m.reply_text("user tidak masuk kedalam daftar blacklist.")
     try:
         mention = (await app.get_users(user_id)).mention
     except IndexError:
@@ -147,9 +147,9 @@ async def banFunc(_, m):
             else "Anon"
         )
     await remove_bisu_user(user_id)
-    return await m.reply(f"User : {mention} pasien sudah masuk ke whitelist.")
+    return await m.reply(f"User : {mention} user sudah masuk ke whitelist.")
 
-@app.on_message(filters.command(["pro"], PREFIX))
+@app.on_message(filters.command(["active"], PREFIX))
 @prouser
 async def diproin(c, m):
     chat_id = (
@@ -179,7 +179,7 @@ async def KONTOL(c, m):
     await m.reply_text(text)
 
 
-@app.on_message(filters.command(["unpro"], PREFIX))
+@app.on_message(filters.command(["unactive"], PREFIX))
 @prouser
 async def diproin(c, m):
     chat_id = (
