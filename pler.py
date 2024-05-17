@@ -25,17 +25,17 @@ emoji = "😀 😃 😄 😁 😆 😅 😂 🤣 😭 😗 😙 😚 😘 🥰 �
 
 @kntl.on(events.NewMessage(pattern="^/start$"))
 async def help(event):
-  helptext = "**kalo mau pake contact owner ada dibawah, 30k ae bang**"
+  helptext = "**👋🏻 Hi {username}!\n\nBot ini akan menghapus otomatis pesan broadcast yang mengganggu di group. Tambahkan bot sebagai admin dan segera hubungi {OWNER_ID} untuk berlangganan bot ini.**"
   await event.reply(
     helptext,
     link_preview=False,
     buttons=(
       [
-        Button.url('Owner', 't.me/imikoid'),
+        Button.url('ᴏᴡɴᴇʀ 🗿', 't.me/imikoid'),
       ],
       [
-        Button.url('Support', 't.me/alterbasechat'),
-        Button.url('Channel', 't.me/itelegramstore'),
+        Button.url('ʜᴀʀɢᴀ 💸', 't.me/iTelegramStore/11'),
+        Button.url('sᴛᴏʀᴇ 💈', 't.me/itelegramstore'),
       ],
     )
   )
@@ -44,7 +44,7 @@ async def help(event):
 async def mentionall(event):
   chat_id = event.chat_id
   if event.is_private:
-    return await event.respond("**Jangan private bego**")
+    return await event.respond("**fitur ini cuman bisa digunakan di grup**")
   
   is_admin = False
   try:
@@ -66,10 +66,10 @@ async def mentionall(event):
     ):
       is_admin = True
   if not is_admin:
-    return await event.respond("**Lu bukan admin anjeng**")
+    return await event.respond("**kudu jadi admin dulu bang**")
   
   if event.pattern_match.group(1) and event.is_reply:
-    return await event.respond("**Minimal kasih pesan anjeng!!**")
+    return await event.respond("**kasih pesan apa kek!!**")
   elif event.pattern_match.group(1):
     mode = "teks"
     msg = event.pattern_match.group(1)
@@ -77,9 +77,9 @@ async def mentionall(event):
     mode = "balas"
     msg = await event.get_reply_message()
     if msg == None:
-        return await event.respond("**Si anjeng dibilang kasih pesan !!**")
+        return await event.respond("**KASIH PESAN BANG YA TUHAN !!**")
   else:
-    return await event.respond("**Si anjeng dibilang kasih pesan !!**")
+    return await event.respond("**batu bet,dibilang kasih pesan !!**")
   
   spam_chats.append(chat_id)
   usrnum = 0
@@ -107,20 +107,20 @@ async def mentionall(event):
 @kntl.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel_spam(event):
   if not event.chat_id in spam_chats:
-    return await event.respond('**Bego orang gak ada tag all**')
+    return await event.respond('**perasaan ga ada tagall**')
   else:
     try:
       spam_chats.remove(event.chat_id)
     except:
       pass
-    return await event.respond('**Iya Anjeng Nih Gua Stop.**')
+    return await event.respond('**oke stop tagall.**')
 
 
 @kntl.on(events.NewMessage(pattern="^/all ?(.*)"))
 async def mentionall(event):
   chat_id = event.chat_id
   if event.is_private:
-    return await event.respond("**Jangan private bego**")
+    return await event.respond("**fitur ini cuman bisa digrup**")
   
   is_admin = False
   try:
@@ -142,10 +142,10 @@ async def mentionall(event):
     ):
       is_admin = True
   if not is_admin:
-    return await event.respond("**Lu bukan admin anjeng**")
+    return await event.respond("**kudu jadi admin dulu bang**")
   
   if event.pattern_match.group(1) and event.is_reply:
-    return await event.respond("**Minimal kasih pesan anjeng!!**")
+    return await event.respond("**kasih pesan apa kek!!**")
   elif event.pattern_match.group(1):
     mode = "teks"
     msg = event.pattern_match.group(1)
@@ -153,9 +153,9 @@ async def mentionall(event):
     mode = "balas"
     msg = await event.get_reply_message()
     if msg == None:
-        return await event.respond("**Si anjeng dibilang kasih pesan !!**")
+        return await event.respond("**KASIH PESAN BANG YA TUHAN!!**")
   else:
-    return await event.respond("**Si anjeng dibilang kasih pesan !!**")
+    return await event.respond("**batu bet, dibilang kasih pesan!!**")
   
   spam_chats.append(chat_id)
   usrnum = 0
