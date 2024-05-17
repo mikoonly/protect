@@ -20,13 +20,13 @@ async def init():
 # @language
 async def anti_anti(_, m):
     if len(m.command) != 2:
-        return await m.reply_text("Usage: /Protec [on|off]")
+        return await m.reply_text("Usage: /Protect [on|off]")
     status = m.text.split(None, 1)[1].strip()
     status = status.lower()
     chat_id = m.chat.id
     if status == "on":
         if await is_antigcast_on(chat_id):
-            await m.reply_text("Protec Anti-Gcast Active.")
+            await m.reply_text("Protect Anti-Gcast Active.")
         else:
             await antigcast_on(chat_id)
             await m.reply_text(
