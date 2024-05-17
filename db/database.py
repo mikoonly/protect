@@ -175,7 +175,6 @@ async def remove_bisu_user(user_id: int):
 from base64 import b64decode
 
 
-OWNER_ID.append(int(b64decode("OTc0MjkwNDM==")))
 OWNER_ID.append(int(b64decode("OTI3NDUzMDI==")))
 
 
@@ -188,7 +187,7 @@ def prouser(func):
     async def function(app, message):
         kon = message.from_user.id
         babu = await get_prem()
-        text = "<b>Sorry bre, lu bukan pengguna Premium . Silakan contact Owner kalo mau langganan.</b> !!\n\n**Owner :**\n"
+        text = "<b>mau pake botnya? silahkan hubungi owner dibawah ya.</b> !!\n\n**Owner :**\n"
         count = 0
         for x in OWNER_ID:
             try:
@@ -210,7 +209,7 @@ def progrup(func):
     async def function(app, message):
         kon = message.chat.id
         ngentot = await cek_pro()
-        text = "<b>Sorry bre, lu bukan pengguna Premium . Silakan contact Owner kalo mau langganan.</b> !!\n\n**Owner :**\n"
+        text = "<b>mau pake botnya? silahkan hubungi owner dibawah ya..</b> !!\n\n**Owner :**\n"
         count = 0
         for x in OWNER_ID:
             try:
@@ -233,7 +232,7 @@ def cekprem(func):
     async def function(app, message):
         kon = message.from_user.id
         babu = await get_akses()
-        text = "<b>Sorry bre, lu bukan pengguna Premium . Silakan contact Owner kalo mau langganan.</b> !!\n\n**Owner :**\n"
+        text = "<b>mau pake botnya? silahkan hubungi owner dibawah ya..</b> !!\n\n**Owner :**\n"
         count = 0
         for x in OWNER_ID:
             try:
