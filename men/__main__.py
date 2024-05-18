@@ -159,9 +159,9 @@ async def diproin(c, m):
         return
     diprokan = await add_pro(chat_id)
     if diprokan:
-        return
+          await m.reply_text("Added to Anti-Gcast.")
     else:
-        await m.reply_text("Added to Anti-Gcast.")
+        return
 
 
 @app.on_message(filters.command("getactive", PREFIX))
