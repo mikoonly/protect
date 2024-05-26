@@ -49,7 +49,7 @@ async def isGcast(filter, c, update):
     awoos = update.text
     user = update.from_user.id
     x = awoos.lower()
-    bl_url = "https://raw.githubusercontent.com/mikoonly/Mugiawara/add-code-of-conduct-1/DewmiBot/bl.json"
+    bl_url = "https://raw.githubusercontent.com/mikoonly/antigcast/main/bl.txt?"
     response = requests.get(bl_url)
     if response.status_code == 200:
         lbl = response.text.split("\n")
