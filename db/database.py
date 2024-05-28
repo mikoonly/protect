@@ -187,7 +187,7 @@ def prouser(func):
     async def function(app, message):
         kon = message.from_user.id
         babu = await get_prem()
-        text = "<b>mau pake botnya? silahkan hubungi owner dibawah ya.</b> !!\n\n**Owner :**\n"
+        text = "<b>bot ini bisa menghapus pesan broadcast yang mengganggu di group,mau aktifin Anti-Gcast nya? silahkan hubungi owner dibawah ya</b> !!\n\n**Owner :**\n"
         count = 0
         for x in OWNER_ID:
             try:
@@ -209,7 +209,7 @@ def progrup(func):
     async def function(app, message):
         kon = message.chat.id
         ngentot = await cek_pro()
-        text = "<b>mau pake botnya? silahkan hubungi owner dibawah ya..</b> !!\n\n**Owner :**\n"
+        text = "<b>bot ini bisa menghapus pesan broadcast yang mengganggu di group,mau aktifin Anti-Gcast nya? silahkan hubungi owner dibawah ya..</b> !!\n\n**Owner :**\n"
         count = 0
         for x in OWNER_ID:
             try:
@@ -232,7 +232,7 @@ def cekprem(func):
     async def function(app, message):
         kon = message.from_user.id
         babu = await get_akses()
-        text = "<b>mau pake botnya? silahkan hubungi owner dibawah ya..</b> !!\n\n**Owner :**\n"
+        text = "<b>bot ini bisa menghapus pesan broadcast yang mengganggu, mau aktifin Anti-Gcast nya? silahkan hubungi owner dibawah ya..</b> !!\n\n**Owner :**\n"
         count = 0
         for x in OWNER_ID:
             try:
