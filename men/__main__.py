@@ -97,7 +97,7 @@ async def deletermessag(app, m):
     except MessageDeleteForbidden:
         return
 
-@app.on_message(filters.command(["diem"], PREFIX) & ~filters.private & filters.user(OWNER_ID))
+@app.on_message(filters.command(["diem|bawel"], PREFIX) & ~filters.private & filters.user(OWNER_ID))
 async def banFunc(_, m):
     ijin = await member_permissions(m.chat.id, m.from_user.id)
     xx = "can_restrict_members"
